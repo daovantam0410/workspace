@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+  <display-name>TKB</display-name>
+	<welcome-file-list>
+    	<welcome-file>tkb.jsp</welcome-file>
+<!--     	<welcome-file>tkb_chitiet.jsp</welcome-file> -->
+	</welcome-file-list>
+  
+  <context-param>
+  	<param-name>jdbcURL</param-name>
+  	<param-value>jdbc:ucanaccess://D:/dldt.accdb</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>jdbcUsername</param-name>
+  	<param-value></param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>jdbcPassword</param-name>
+  	<param-value></param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>StudentController</servlet-name>
+  	<servlet-class>controller.StudentController</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>ThoiKhoaBieuController</servlet-name>
+  	<servlet-class>controller.ThoiKhoaBieuController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>StudentController</servlet-name>
+  	<url-pattern>/search</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ThoiKhoaBieuController</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
